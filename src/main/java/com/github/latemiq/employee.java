@@ -22,6 +22,17 @@ public class employee {
     public int getEmployeeID() {
         return employeeID;
     }
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", position='" + position + '\'' +
+                ", employeeID=" + employeeID +
+                ", salary=" + salary +
+                '}';
+    }
+
 }
 
 
