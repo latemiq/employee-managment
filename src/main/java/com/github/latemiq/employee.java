@@ -14,6 +14,14 @@ public class employee {
         this.employeeID = employeeID;
         this.salary = salary;
     }
+
+    public String getPosition() {
+        return position;
+    }
+
+    public int getEmployeeID() {
+        return employeeID;
+    }
 }
 
 
