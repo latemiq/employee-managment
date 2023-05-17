@@ -45,15 +45,24 @@ public class EmployeeManager {
             System.out.println(employee);
         }
     }
-    public HashSet<Employee> searchEmployeesByPosition(String position){
-        HashSet<Employee> employeeList = new HashSet<>(employees.values());
-        Iterator<Employee> employeeIterator = employeeList.iterator();
-        while(employeeIterator.hasNext())
-        {
-            Employee employee = employeeIterator.next();
-            if(!employee.getPosition().equals(position))
-                employeeIterator.remove();
+//    public HashSet<Employee> searchEmployeesByLastName(String lastName){
+//        HashSet<Employee> employeeList = new HashSet<>(employees.values());
+//        Iterator<Employee> employeeIterator = employeeList.iterator();
+//        while(employeeIterator.hasNext())
+//        {
+//            Employee employee = employeeIterator.next();
+//            if(!employee.getPosition().equals(lastName))
+//                employeeIterator.remove();
+//        }
+//        return employeeList;
+//    }
+public HashSet<Employee> searchEmployeesByLastName(String lastName) {
+    HashSet<Employee> matchingEmployees = new HashSet<>();
+    for (Employee employee : employees.values()) {
+        if (employee.getLastName().equals(lastName)) {
+            matchingEmployees.add(employee);
         }
-        return employeeList;
     }
+    return matchingEmployees;
+}
     }

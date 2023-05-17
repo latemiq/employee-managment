@@ -1,18 +1,21 @@
 package com.github.latemiq;
 
 public class Employee {
+    private static int AID = 1;
     private String firstName;
     private String lastName;
     private String position;
+
     private int employeeID;
     private int salary;
 
-    public Employee(String firstName, String lastName, String position, int employeeID, int salary) {
+    public Employee(String firstName, String lastName, String position, int salary) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.position = position;
-        this.employeeID = employeeID;
+        this.employeeID = AID;
         this.salary = salary;
+        AID++;
     }
 
     public String getPosition() {
@@ -35,6 +38,14 @@ public class Employee {
 
     public void setSalary(int salary) {
         this.salary = salary;
+    }
+
+    public void setPosition(String position) {
+        this.position = position;
+    }
+
+    public Object getLastName() {
+        return lastName;
     }
 }
 
