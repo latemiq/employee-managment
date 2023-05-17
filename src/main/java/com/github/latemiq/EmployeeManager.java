@@ -19,4 +19,20 @@ import java.util.HashMap;
             else
                 System.out.println("Pracownik o takim ID nie istnieje");
         }
-}
+        public void updateEmployee(int employeeID, Employee newEmployee){
+            if(employees.containsKey(employeeID))
+            {
+                employees.put(employeeID,newEmployee);
+            }
+            else
+                System.out.println("Pracownik o takim ID nie istnieje");
+        }
+        public Employee searchEmployeeByID(int employeeID) {
+            if(employees.containsKey(employeeID)){
+                return employees.get(employeeID);
+            }
+            else
+                System.out.println("Nie znaleziono pracownika o danym ID");
+            return null;
+        }
+    }
