@@ -18,13 +18,15 @@ public class Main {
         Employee employee7 = new Employee("Kevin", "Wilson", "IT Specialist", 60000);
         Employee employee8 = new Employee("Samantha", "Davis", "Customer Service Representative", 40000);
 
-        HashMap<Integer,Employee> employeeHashMap = new HashMap<>();
-        EmployeeManager employeeManager = new EmployeeManager(employeeHashMap);
+        EmployeeManager employeeManager = new EmployeeManager();
         employeeManager.addEmployee(employee1);
         employeeManager.addEmployee(employee2);
         employeeManager.addEmployee(employee3);
         employeeManager.addEmployee(employee4);
         employeeManager.addEmployee(employee5);
+        employeeManager.addEmployee(employee6);
+        employeeManager.addEmployee(employee7);
+        employeeManager.addEmployee(employee8);
 
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         Scanner wejscie = new Scanner(System.in);

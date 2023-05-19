@@ -6,10 +6,13 @@ import java.util.HashSet;
 import java.util.Iterator;
 
 public class EmployeeManager {
-        private final HashMap<Integer,Employee> employees;
+        private final HashMap<Integer,Employee> employees = new HashMap<>();
 
-        public EmployeeManager(HashMap<Integer, Employee> employees) {
-            this.employees = employees;
+        public int size() {
+            return employees.size();
+        }
+        public void clear() {
+            employees.clear();
         }
 
         public  void addEmployee(Employee employee){
