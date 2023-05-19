@@ -1,11 +1,14 @@
 package com.github.latemiq;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Iterator;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+import java.util.*;
+
+@Component
 public class EmployeeManager {
+
+    @Autowired
         private final HashMap<Integer,Employee> employees = new HashMap<>();
 
         public int size() {
@@ -41,12 +44,10 @@ public class EmployeeManager {
                 System.out.println("Nie znaleziono pracownika o danym ID");
             return null;
         }
-    public void listAllEmployees(){
+    public List<Employee> listAllEmployees(){
         ArrayList<Employee> employeeList = new ArrayList<>(employees.values());
-        for (Employee employee: employeeList
-        ) {
-            System.out.println(employee);
-        }
+
+            return employeeList;
     }
 //    public HashSet<Employee> searchEmployeesByLastName(String lastName){
 //        HashSet<Employee> employeeList = new HashSet<>(employees.values());

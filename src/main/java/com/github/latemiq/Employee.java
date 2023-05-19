@@ -47,6 +47,11 @@ public class Employee {
     public Object getLastName() {
         return lastName;
     }
+
+    public int getSalary() {
+
+        return salary;
+    }
 }
 
 
