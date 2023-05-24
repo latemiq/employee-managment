@@ -1,0 +1,21 @@
+header{
+    background-color: blue;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0px 10px;
+}
+p header{
+    display: flex;
+}
+button{
+    display: flex;
+    padding: 8px;
+    background-color: blue;
+    color: white;
+    border: 1px white solid;
+}
+button:hover{
+    background-color: #ffffff8c;
+}

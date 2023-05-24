@@ -1,12 +1,22 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
-<head></head>
+<head>
+    <link rel="stylesheet" href="/style.css">
+<!--    <link rel="stylesheet" type="text/css" th:href="@{/style.css}"/>-->
+</head>
 <body>
-    <h1>Hello World</h1>
+    <header class="header">
+        <p>Full Stack Application</p>
+        <button>Add User</button>
+    </header>
     <div th:each="data : ${employees}">
         <span th:text="${data.firstName}"></span>
         <span th:text="${data.lastName}"></span>
         <span th:text="${data.position}"></span>
         <span th:text="${data.salary}"></span>
+
+    </div>
+    <div>
+
     </div>
 </body>
 </html>
