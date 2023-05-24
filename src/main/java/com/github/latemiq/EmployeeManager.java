@@ -8,8 +8,20 @@ import java.util.*;
 @Component
 public class EmployeeManager {
 
-    @Autowired
-        private final HashMap<Integer,Employee> employees = new HashMap<>();
+        private final static HashMap<Integer,Employee> employees = new HashMap<>();
+
+        // TODO: TO remove after testing
+        static {
+            Employee employee1 = new Employee("Adam", "Nawalka", "Manager", 50000);
+            Employee employee2 = new Employee("Robert", "Kowalski", "Manager", 10000);
+            Employee employee3 = new Employee("Krzysztof", "Nowak", "Manager", 20000);
+            Employee employee4 = new Employee("Michal", "Szczepanik", "Manager", 30000);
+
+            employees.put(employee1.getEmployeeID(), employee1);
+            employees.put(employee2.getEmployeeID(), employee2);
+            employees.put(employee3.getEmployeeID(), employee3);
+            employees.put(employee4.getEmployeeID(), employee4);
+        }
 
         public int size() {
             return employees.size();
@@ -46,8 +58,7 @@ public class EmployeeManager {
         }
     public List<Employee> listAllEmployees(){
         ArrayList<Employee> employeeList = new ArrayList<>(employees.values());
-
-            return employeeList;
+        return employeeList;
     }
 //    public HashSet<Employee> searchEmployeesByLastName(String lastName){
 //        HashSet<Employee> employeeList = new HashSet<>(employees.values());
