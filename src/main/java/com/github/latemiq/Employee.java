@@ -18,6 +18,11 @@ public class Employee {
         AID++;
     }
 
+    public Employee() {
+    }
+
+
+
     public static int getAID() {
         return AID;
     }

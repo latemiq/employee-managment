@@ -9,13 +9,56 @@ header{
 p header{
     display: flex;
 }
-button{
+.header__button{
     display: flex;
     padding: 8px;
     background-color: blue;
     color: white;
     border: 1px white solid;
 }
-button:hover{
+.header__button:hover{
     background-color: #ffffff8c;
+}
+table{
+    border: 1px solid #00000017;
+    box-shadow: 5px 5px 10px  #0000003d;
+    display: flex;
+    width: %;
+    align-content: center;
+    margin: 15px;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.container__view-button{
+    color: white;
+    background-color:blue;
+    border-radius: 5px;
+    border: none;
+}
+.container__view-button:hover{
+    color: #80008000;
+}
+.container__edit-button{
+    color: blue;
+    background-color:white;
+    border-radius: 5px;
+    border: 1px solid blue;
+}
+.container__edit-button:hover{
+    background-color: #0000ff26;
+}
+.container__remove-button{
+    color: white;
+    background-color:#ff0000d4;
+    border-radius: 5px;
+    border: none;
+}
+.container__remove-button:hover{
+    color:yellow;
+}
+.container__edit-button, .container__remove-button, .container__view-button{
+    padding: 5px;
 }
